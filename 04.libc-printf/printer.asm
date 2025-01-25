@@ -1,6 +1,6 @@
 section .data
     message:    db "Hello, World", 0
-    fmt:        db "%s : %d. Pi = %4.3f", 10, 0
+    fmt:        db "%s : %d. Pi = %f", 10, 0
     fnum:       dq 3.14159
 
 section .text
