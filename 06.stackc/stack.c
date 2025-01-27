@@ -3,6 +3,7 @@
 #define BYTECODE_MASK 0x0000ffffffffffff
 
 #define PUSH_INT 0x0001000000000000
+#define IADD     0x0002000000000000
 
 int main(void) {
     long stack[1024];
@@ -27,6 +28,7 @@ int main(void) {
         // printf("stack pointer = 0x%p\n", sp);
 
         //perform add
+        ip = IADD;
         a = *sp;
         sp++;
         b = *sp;
