@@ -20,7 +20,9 @@ main:
     mov	rax, 1          ; set number of float variables in vargs list.
 
     ; Call printf
-    call printf wrt ..plt
+    call printf wrt ..plt   ;call printf with relation to procedure linkage table
+
+    ;return val in rax - < 0 = error, >=0 = number of bytes written
 
     pop	rbp		; Pop stack
 
